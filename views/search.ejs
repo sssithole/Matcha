@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login Register</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstarp/3.0.2/css/bootstarp.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        html{
+            padding: 50px;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+            <h2>search</h2>
+        <form action="/search" method="POST">
+            <div class="form-group">
+                <label>Search</label>
+                <input type="search" class="form-control" name="search">
+                <label>Distance [km]:</label>
+            <span id="demo"></span> Km <br/>
+            <input type="range" min="0" max="100" name="distance" value="30" id="myRange" style="width: 30%;"> <br><br>
+            <script>
+                var slider = document.getElementById("myRange");
+                var output = document.getElementById("demo");
+                output.innerHTML = slider.value;
+                                
+                slider.oninput = function() {
+                output.innerHTML = this.value;
+                }
+            </script>
+            </div>
+            <button type="submit"class="btn btn-success btn-lg" >search</button>
+        </form>        
+    </div>
+     
+    
+</body>
+</html>
